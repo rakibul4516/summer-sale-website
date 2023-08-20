@@ -21,7 +21,8 @@ function setProductName(productNameValue){
     const parentDiv = document.getElementById('name-field')
     const createNameField = document.createElement('h3');
     parentDiv.appendChild(createNameField)
-    createNameField.innerText = productNameValue;
+    const count = parentDiv.childElementCount;
+    createNameField.innerText = `${count} . ${productNameValue}`;
 
 }
 function removeAttibute(){
