@@ -18,13 +18,16 @@ function setProductPrice(productTotalId,totalPrice){
 }
 // Function for set name in payment section
 function setProductName(productNameValue){
-    const parentDiv = document.getElementById('name-field')
+    const parentDiv = document.getElementById('name-field');
     const createNameField = document.createElement('h3');
-    parentDiv.appendChild(createNameField)
+    parentDiv.appendChild(createNameField);
+    // createNameField.setAttribute('class','get-productname')
+    createNameField.style.fontSize = '20px';
+    createNameField.style.fontWeight = '500';
     const count = parentDiv.childElementCount;
     createNameField.innerText = `${count} . ${productNameValue}`;
-
 }
+// Function for remove attribute form button
 function removeAttibute(){
     const totalAmount = getProductPrice('total-price');
     if(totalAmount > 0){
@@ -36,23 +39,23 @@ function removeAttibute(){
 }
 // Product 1 
 document.getElementById('product-container1').addEventListener('click',function(){
-    const productPrice = getProductPrice('product-price1')
-    const productName = getProductName('product-name1')
-    const previousTotal = getProductPrice('total-price')
+    const productPrice = getProductPrice('product-price1');
+    const productName = getProductName('product-name1');
+    const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 2
 document.getElementById('product-container2').addEventListener('click',function(){
-    const productPrice = getProductPrice('product-price2')
-    const productName = getProductName('product-name2')
-    const previousTotal = getProductPrice('total-price')
+    const productPrice = getProductPrice('product-price2');
+    const productName = getProductName('product-name2');
+    const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 3
 document.getElementById('product-container3').addEventListener('click',function(){
@@ -61,8 +64,8 @@ document.getElementById('product-container3').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 4
 document.getElementById('product-container4').addEventListener('click',function(){
@@ -71,8 +74,8 @@ document.getElementById('product-container4').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 5
 document.getElementById('product-container5').addEventListener('click',function(){
@@ -81,8 +84,8 @@ document.getElementById('product-container5').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 6
 document.getElementById('product-container6').addEventListener('click',function(){
@@ -91,8 +94,8 @@ document.getElementById('product-container6').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 7
 document.getElementById('product-container7').addEventListener('click',function(){
@@ -101,8 +104,8 @@ document.getElementById('product-container7').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 8
 document.getElementById('product-container8').addEventListener('click',function(){
@@ -111,8 +114,8 @@ document.getElementById('product-container8').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 //Product 9
 document.getElementById('product-container9').addEventListener('click',function(){
@@ -121,24 +124,22 @@ document.getElementById('product-container9').addEventListener('click',function(
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
     setProductPrice('total-price',priceTotal);
-    setProductName(productName)
-    removeAttibute()
+    setProductName(productName);
+    removeAttibute();
 })
 
 
 //Add promo code system
 document.getElementById('btn-coupon').addEventListener('click',function(){
     const totalPrice = getProductPrice('total-price');
-    const getCouponValue = document.getElementById('coupon-field').value;
-    const discountPrice = getProductPrice('discount-price');
-    
+    const getCouponValue = document.getElementById('coupon-field').value;      
     if (getCouponValue === 'SELL200'){
         const discountPrice = totalPrice * 20 / 100;
         const totalPriceWithoutDiscount = totalPrice - discountPrice;
         setProductPrice('discount-price',discountPrice);
         setProductPrice('total',totalPriceWithoutDiscount);
+        getCouponValue.value = '';  
     }
-    
 })
 
 //Model event listener
