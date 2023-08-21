@@ -138,7 +138,7 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 id="product-name8" class="card-title">K. Accessories</h2>
+                            <h2 id="product-name8" class="card-title">Children play</h2>
                             <p><span id="product-price8">299.00</span> TK</p>
                         </div>
                         <div id="product-container9" class="flex flex-col items-center bg-base-100 shadow-xl py-3 lg:w-[220px] md:w-[220px]">
@@ -150,7 +150,7 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 id="product-name9" class="card-title">K. Accessories</h2>
+                            <h2 id="product-name9" class="card-title">Flexible Sofa</h2>
                             <p><span id="product-price9">339.00</span> TK</p>
                         </div>
                     </div>
@@ -165,24 +165,23 @@
                     <button id="btn-coupon" class="bg-[#E527B2] text-white font-bold btn hover:bg-amber-400 hover:text-black" disabled>Apply</button>
                 </div>
                 <div id="name-field" class="border-b-2 bg-base-100 shadow-xl py-5 px-10">
-
                 </div>
-                <div class="bg-base-100 shadow-xl py-5 px-10 ">
-                    <h4 class="font-semibold text-lg">Total price : <span id="total-price">00</span> TK</h4>
-                    <h4 class="text-lg font-semibold">Discount : <span id="discount-price">00</span> TK</h4>
-                    <h4 class="pb-10 text-lg font-semibold">Total : <span id="total">00</span> TK</h4>
-                    <label id="btn-payment"  onclick="my_modal_1.showModal()" class="bg-[#E527B2] py-2 text-white font-bold w-full mx-auto rounded-lg btn hover:bg-amber-400 hover:text-black" disabled>Make Purchase</label>
-                        <dialog id="my_modal_1" class="modal">
-                        <form method="dialog" class="modal-box">
-                            <div class="card-body items-center text-center">
-                          <img class="mx-auto" src="./images/congo.png" alt="">
-                                <h3 class="font-bold text-3xl text-center">Congratulations</h3>
-                                <p class="py-4 text-center">Your Purchase the product</p>
-                                <!-- if there is a button in form, it will close the modal -->
-                                <button id="btn-model" class="btn bg-[#E527B2] text-white items-center hover:text-black hover:bg-slate-400">Go Home</button>
-                                </div>
-                        </form>
-                        </dialog>  
+                <div class="bg-base-100 shadow-xl py-5 px-10 relative">
+                    <h4 class="font-semibold text-lg">Total price : <span id="total-price" class="text-lg font-medium">00</span> TK</h4>
+                    <h4 class="text-lg font-semibold">Discount : <span id="discount-price" class="text-lg font-medium" >00</span> TK</h4>
+                    <h4 class="pb-10 text-lg font-semibold">Total : <span id="total" class="text-lg font-medium">00</span> TK</h4>
+                    <label id="btn-payment"  onclick="my_modal_1.showModal()" class="bg-[#E527B2] py-2 text-white font-bold w-10/12 mx-auto rounded-lg btn hover:bg-amber-400 hover:text-black absolute right-7 md:right-10 lg:right-7" disabled>Make Purchase</label>
+                    <dialog id="my_modal_1" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <div class="card-body items-center text-center">
+                        <img class="mx-auto" src="./images/congo.png" alt="">
+                            <h3 class="font-bold text-3xl text-center">Congratulations</h3>
+                            <p class="py-4 text-center">Your Purchase the product</p>
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button id="btn-model" class="btn bg-[#E527B2] text-white items-center hover:text-black hover:bg-slate-400">Go Home</button>
+                            </div>
+                    </form>
+                    </dialog>  
                 </div>
             </div>
         </div>

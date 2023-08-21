@@ -21,7 +21,6 @@ function setProductName(productNameValue){
     const parentDiv = document.getElementById('name-field');
     const createNameField = document.createElement('h3');
     parentDiv.appendChild(createNameField);
-    // createNameField.setAttribute('class','get-productname')
     createNameField.style.fontSize = '20px';
     createNameField.style.fontWeight = '500';
     const count = parentDiv.childElementCount;
@@ -43,7 +42,7 @@ document.getElementById('product-container1').addEventListener('click',function(
     const productName = getProductName('product-name1');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -53,7 +52,7 @@ document.getElementById('product-container2').addEventListener('click',function(
     const productName = getProductName('product-name2');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -63,7 +62,7 @@ document.getElementById('product-container3').addEventListener('click',function(
     const productName = getProductName('product-name3');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -73,7 +72,7 @@ document.getElementById('product-container4').addEventListener('click',function(
     const productName = getProductName('product-name4');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -83,7 +82,7 @@ document.getElementById('product-container5').addEventListener('click',function(
     const productName = getProductName('product-name5');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -93,7 +92,7 @@ document.getElementById('product-container6').addEventListener('click',function(
     const productName = getProductName('product-name6');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -103,7 +102,7 @@ document.getElementById('product-container7').addEventListener('click',function(
     const productName = getProductName('product-name7');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -113,7 +112,7 @@ document.getElementById('product-container8').addEventListener('click',function(
     const productName = getProductName('product-name8');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -123,7 +122,7 @@ document.getElementById('product-container9').addEventListener('click',function(
     const productName = getProductName('product-name9');
     const previousTotal = getProductPrice('total-price');
     const priceTotal = previousTotal + productPrice;
-    setProductPrice('total-price',priceTotal);
+    setProductPrice('total-price',priceTotal.toFixed(2));
     setProductName(productName);
     removeAttibute();
 })
@@ -132,13 +131,16 @@ document.getElementById('product-container9').addEventListener('click',function(
 //Add promo code system
 document.getElementById('btn-coupon').addEventListener('click',function(){
     const totalPrice = getProductPrice('total-price');
-    const getCouponValue = document.getElementById('coupon-field').value;      
-    if (getCouponValue === 'SELL200'){
+    const getCouponValue = document.getElementById('coupon-field');
+    const couponValue = getCouponValue.value;
+    getCouponValue.value ='';
+    if (couponValue === 'SELL200'){
         const discountPrice = totalPrice * 20 / 100;
         const totalPriceWithoutDiscount = totalPrice - discountPrice;
-        setProductPrice('discount-price',discountPrice);
-        setProductPrice('total',totalPriceWithoutDiscount);
-        getCouponValue.value = '';  
+        setProductPrice('discount-price',discountPrice.toFixed(2));
+        setProductPrice('total',totalPriceWithoutDiscount.toFixed(2)); 
+    } else{
+        alert('Invalid coupon code!')
     }
 })
 
